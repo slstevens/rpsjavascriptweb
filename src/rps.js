@@ -4,13 +4,9 @@ function Paper() {};
 
 function Rules() {};
 
-Rock.prototype.beats = function(choice) {
-	if(choice === scissors) 
-		return true;
-	else
-		return false;
-};
-
 Rules.prototype.winner = function(choiceOne, choiceTwo) {
-	return choiceOne
+	if (choiceOne === rock)
+		return choiceOne
+	else
+		return choiceTwo
 };

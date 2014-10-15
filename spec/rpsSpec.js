@@ -7,25 +7,21 @@
 describe('Rock, Paper, Scissors', function() {
 
 	describe('rules decides the winner', function() {
-		it ("rock plays scissors", function() {
+		
+		beforeEach(function() {
 			rules = new Rules;
 			rock = new Rock;
 			scissors = new Scissors;
+		});
+
+		it ("rock plays scissors", function() {
 			expect(rules.winner(rock, scissors)).toEqual(rock);
 		});
-	});
 
+		it ("scissors plays rock", function() {
+			expect(rules.winner(scissors,rock)).toEqual(rock);
+		});
 
-	it("Rock beats Scissors", function() {
-		rock = new Rock;
-		scissors = new Scissors;
-		expect(rock.beats(scissors)).toEqual(true);
-	});
-
-	it("Rock loses against Paper", function() {
-		paper = new Paper;
-		rock = new Rock;
-		expect(rock.beats(paper)).toEqual(false);
 	});
 
 });
