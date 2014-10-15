@@ -9,15 +9,20 @@ function Paper() {
 };
 function Draw() {};
 
-function Rules() {};
+function Rules() {
+
+	this.trumps = {
+		"Rock" : "Scissors",
+		"Scissors" : "Paper",
+		"Paper" : "Rock"
+	}
+};
 
 Rules.prototype.winner = function(choiceOne, choiceTwo) {
 	if (choiceOne.type === choiceTwo.type)
 		return new Draw;
-	else if (choiceOne.type === 'Paper' && choiceTwo.type === 'Rock' ||
-			 choiceOne.type === 'Rock' && choiceTwo.type === 'Scissors' ||
-			 choiceOne.type === 'Scissors' && choiceTwo.type === 'Paper')
+	if (this.trumps[choiceOne.type] === choiceTwo.type)
 		return choiceOne
-	else
-		return choiceTwo
+
+	return choiceTwo
 };
