@@ -14,7 +14,9 @@ function Rules() {};
 Rules.prototype.winner = function(choiceOne, choiceTwo) {
 	if (choiceOne.type === choiceTwo.type)
 		return new Draw;
-	else if (choiceOne.type === 'Rock')
+	else if (choiceOne.type === 'Paper' && choiceTwo.type === 'Rock' ||
+			 choiceOne.type === 'Rock' && choiceTwo.type === 'Scissors' ||
+			 choiceOne.type === 'Scissors' && choiceTwo.type === 'Paper')
 		return choiceOne
 	else
 		return choiceTwo
