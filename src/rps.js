@@ -21,8 +21,9 @@ function Rules() {
 	this.trumps = {
 		"Rock" : {"Scissors": "blunt", "Lizard": "crushes"},
 		"Scissors" : {"Paper": "cuts", "Lizard": "decapitates"},
-		"Paper" : {"Rock": "covers"},
-		"Lizard" : {"Paper": "eats", "Spock": "poisons"}
+		"Paper" : {"Rock": "covers", "Spock": "disproves"},
+		"Lizard" : {"Paper": "eats", "Spock": "poisons"},
+		"Spock" : {"Scissors": "smashes", "Rock": "vaporises"}
 	};
 };
 

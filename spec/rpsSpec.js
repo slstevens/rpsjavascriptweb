@@ -34,8 +34,8 @@ describe('Rock, Paper, Scissors', function() {
 		beforeEach(function() {
 			rules = new Rules;
 			rock = new Rock;
-			scissors = new Scissors;
 			paper = new Paper;
+			scissors = new Scissors;
 			lizard = new Lizard;
 			spock = new Spock;
 		});
@@ -94,10 +94,36 @@ describe('Rock, Paper, Scissors', function() {
 			expect(rules.winner(scissors, lizard)).toEqual(scissors)
 		});
 
-		// Going to stop doing both possibilities now
-
 		it('lizard plays spock', function() {
 			expect(rules.winner(lizard, spock)).toEqual(lizard);
+		});
+
+		it('spock plays lizard', function() {
+			expect(rules.winner(spock, lizard)).toEqual(lizard);
+		});
+
+		it('spock plays rock', function() {
+			expect(rules.winner(spock, rock)).toEqual(spock)
+		});
+
+		it('rock plays spock', function() {
+			expect(rules.winner(rock, spock)).toEqual(spock);
+		});
+
+		it('spock plays paper', function() {
+			expect(rules.winner(spock, paper)).toEqual(paper)
+		});
+
+		it('paper plays spock', function() {
+			expect(rules.winner(paper, spock)).toEqual(paper)
+		});
+
+		it('spock plays scissors', function() {
+			expect(rules.winner(spock, scissors)).toEqual(spock)
+		});
+
+		it('scissors plays spock', function() {
+			expect(rules.winner(scissors, spock)).toEqual(spock)
 		});
 	});
 
