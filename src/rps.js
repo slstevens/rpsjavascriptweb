@@ -35,3 +35,10 @@ Rules.prototype.winner = function(choiceOne, choiceTwo) {
 
 	return choiceTwo
 };
+
+
+// Players
+// Victory message
+// loser
+// winning verb
+

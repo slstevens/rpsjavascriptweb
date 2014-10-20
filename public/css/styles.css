@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700);
+
+body {
+    background-color: #00C8BE;
+}
+
+h1 {
+	font-family: 'Arvo', serif;
+	text-shadow: 5px 5px #bcaa01;
+	text-align: center;
+	color: #F6E100 ;
+	font-size: 4.5em;
+	font-weight: bold;
+	line-height: 1.25em;
+	margin: 70px auto 40px;
+	letter-spacing: -4px;
+}
+
+img {
+	width: 95%;
+	padding: 0;
+	margin-top: 15px;
+}
+
+img:hover {
+	width: 100%;
+	margin-top: 0;
+}
+
+.img {
+	display: inline-block;
+	width: 19%;
+	text-align: center;
+}
+
+.img-container {
+	display: block;
+	text-align: center;
+	margin: 1000px auto 500px;
+	padding: 0;
+}
+
+#name-input {
+	max-width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#name {
+	font-family: Helvetica Neue, Arial, sans-serif;
+	font-size: 2.0em;
+	font-weight: 200;
+	text-align: center;
+	width: 100%;
+	border: none;
+}
+
+.submit-button {
+	width: 100%;
+	height: 60px;
+	font-size: 1.5em;
+	color: white;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+	background: #e74c3c;
+	border: 0;
+	border-bottom: 4px solid #db4334;
+	cursor: pointer;
+	-webkit-box-shadow: inset 0 -2px #db4334;
+	box-shadow: inset 0 -2px #db4334;
+}
+
+.submit-button:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

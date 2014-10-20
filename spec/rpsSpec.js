@@ -127,6 +127,16 @@ describe('Rock, Paper, Scissors', function() {
 		});
 	});
 
+	describe('the game set up', function() {
+
+		it('should initialise with a player 1 and player 2', function() {
+			game = new Game;
+			var 
+			expect(game
+		});
+
+	});
+
 	// describe('Playing RPS', function() {
 	// 	it("player should have a name", function() {
 	// 		player = new Player
