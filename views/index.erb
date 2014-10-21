@@ -9,8 +9,9 @@
 	<header>
 		<h1> Rock, Paper, Scissors,<br>
 				Lizard, Spock.</h1>
-		<h2></h2>
-		<h3></h3>
+		<h2 id="greeting"></h2>
+		<h2 id="result"></h2>
+		<h2 id="choices"></h3>
 	</header>
 	<main class="image-container">
 			<div class="img-layout"><img data-gesture="rock" src="img/rock.png" alt="rock" class="img-choice"></div>
@@ -26,6 +27,19 @@
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
   	<script type="text/javascript" src="js/rps.js"></script>
   	<script type="text/javascript" src="js/game.js"></script>
+  	
+  	<script>
+  	$(document).ready(function() {
+  		$('#name-input').on('submit', function(event) {
+  			event.preventDefault();
+
+  			$('#greeting').text("Hey " + $('#name').val() + "! Choose your weapon:")
+  		});
+
+
+
+  	});
+  	</script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
   	$(document).ready(function() {
-
+      var compChoice;
   		var game = new Rules
   		var gest = {rock: new Rock, paper: new Paper, scissors: new Scissors, lizard: new Lizard, spock: new Spock}
       var computersChoice =  function() {
@@ -16,19 +16,15 @@
 
   		var andTheWinnerIs = function(winner) {
         if(winner.type === 'Draw')
-             $('h2').text("Snap, it's a " + winner.type);
-              
+             $('#result').text("Snap, it's a " + winner.type + "! " + "You both chose "+ compChoice.type + ". Choose again!");      
         else
-  			     $('h2').text("The winner is " + winner.type);
-              
+  			     $('#result').text("The winner is " + winner.type);
   		};
 
   		$('.img-choice').on('click', function() {
-        var compChoice = computersChoice();
+        compChoice = computersChoice();
   			andTheWinnerIs(game.winner(playersChoice(this), compChoice))
-        $('h3').text("Computer chose " + compChoice.type + " " + "Player chose " + playersChoice(this).type)
+        $('#choices').text("Computer chose " + compChoice.type + " " + ". You chose " + playersChoice(this).type)
   		});
-
-
 
 });
