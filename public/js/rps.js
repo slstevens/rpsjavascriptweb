@@ -14,7 +14,9 @@ function Spock() {
 	this.type = 'Spock'
 };
 
-function Draw() {};
+function Draw() {
+	this.type = 'Draw'
+};
 
 function Rules() {
 
@@ -28,8 +30,7 @@ function Rules() {
 };
 
 Rules.prototype.winner = function(choiceOne, choiceTwo) {
-	if (choiceOne.type === choiceTwo.type)
-		return new Draw;
+	if (choiceOne.type === choiceTwo.type) return new Draw();
 	if (choiceTwo.type in this.trumps[choiceOne.type] )
 		return choiceOne
 
