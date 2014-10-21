@@ -10,6 +10,7 @@
   		var andTheWinnerIs = function(winner) {
         if(winner === 'Draw')
              $('h1').text("Snap, it's a " + winner);
+           
         else
   			     $('h1').text("The winner is " + winner);
   		};
